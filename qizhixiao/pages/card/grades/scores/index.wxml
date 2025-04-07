@@ -1,0 +1,56 @@
+<view class="container">
+  <swiper class="swiper" 
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    indicator-dots="{{indicatorDots}}" 
+    circular="false" 
+    bindchange="onSwiperChange">
+    <swiper-item wx:for="{{semesters}}" wx:key="index">
+      <view class="header">
+        <text>{{item.year}}学年 第{{item.semester}}学期</text>
+      </view>
+      <!-- 这里可以添加每个学期的具体成绩内容 -->
+      <view>
+        <block wx:for="{{item.subjects}}" wx:key="name">
+          <text>{{index + 1}}. {{name}}: {{score}}分</text>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="container">
+  <view class="about">
+    <text  decode="{{true}}">总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分：{{currentSemester.totalScore}}</text>
+    <text>体测成绩：{{currentSemester.sportScore}}</text>
+    <text>未及格数：{{currentSemester.failCount}}</text>
+    <text>平均绩点：{{currentSemester.gpa}}</text>
+    <text>年级排名：{{currentSemester.gradeRank}}</text>
+    <text>综测排名：{{currentSemester.compositeRank}}</text>
+  </view>
+  <view class="container">
+    <view class="subjects">
+      <view wx:for="{{currentSemester.subjects}}" wx:key="name" class="subject-item" bindtap="onSubjectTap" data-index="{{index}}">
+        <view class="subject-content">
+          <text class="subject-name">{{item.name}}</text>
+          <text class="subject-score">{{item.score}}</text>
+        </view>
+      </view>
+      <!-- 遮罩层和详细描述的矩形框 -->
+      <view wx:if="{{showDetail}}" class="overlay" bindtap="onOverlayTap">
+        <view class="detail-box">
+          <text>名称：{{detailSubject.name}}</text>
+          <text>性质：{{detailSubject.name}}</text>
+          <text>学分：{{detailSubject.name}}</text>
+          <text>教师：{{detailSubject.name}}</text>
+          <text>分数：{{detailSubject.score}}</text>
+          <text>绩点：{{detailSubject.name}}</text>
+          <text>排名：{{detailSubject.score}}</text>
+          <text>课程代码：{{detailSubject.name}}</text>
+          <text>考核形式：{{detailSubject.score}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+ 

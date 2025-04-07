@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-setting":"/components/mine/setting/index",
+    "my-tooltip":"/components/tooltip/index"
+  }
+}

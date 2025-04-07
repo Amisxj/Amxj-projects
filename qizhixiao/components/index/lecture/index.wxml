@@ -1,0 +1,20 @@
+<!--components/index/lecture/index.wxml-->
+<scroll-view scroll-y="true" style="height: 100%;">
+  <block wx:for="{{cardList}}" wx:key="id">
+    <view class="card" bindtap="goToDetail" data-id="{{item.id}}">
+      <image class="card-image" src="{{item.promotionImg}}" />
+      <text class="card-title">{{item.title}}</text>  
+      <view class="card-content">
+        <view>
+          <image class="card-avatar" src="{{item.avatarImg}}"/>
+          <text class="card-name">{{item.name}}</text> 
+        </view>     
+        <view class="card-text">
+          <text class="card-time-location card-time">{{item.time}} </text>
+          <text class="card-time-location">{{item.location}}</text>
+        </view>  
+      </view>
+    </view>
+    <view class="line"></view>
+  </block>
+</scroll-view>

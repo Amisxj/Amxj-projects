@@ -1,0 +1,5 @@
+<!--pages/team/index.wxml-->
+<view class="container">
+  <my-search classify="{{classify}}" chooseItem="{{chooseItem}}" bind:updateTeamData="updateTeamData"></my-search>
+  <my-team  team="{{team}}" myAvatar="{{myAvatar}}" whereIcon="../../../static/team/address.png" whenIcon="../../../static/team/time.png" ></my-team>
+</view>

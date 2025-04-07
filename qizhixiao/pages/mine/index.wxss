@@ -1,0 +1,18 @@
+/* pages/mine/index.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+.topinformation :active {
+  opacity: 0.9;
+}
+.card {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1000;
+  margin-top: -40rpx;
+}
+.orther {
+  height: 80%;
+}

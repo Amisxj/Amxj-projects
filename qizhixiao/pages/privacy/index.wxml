@@ -1,0 +1,56 @@
+<!--pages/privacy/index.wxml-->
+<view class="container">
+  <view class="form">
+    <form bindsubmit="onSubmit">
+      <view class="form-item">
+        <text>头像</text>
+        <image class="avatar" src="{{userData.avatar}}"></image>
+      </view>
+      <view class="form-item">
+        <text>昵称</text>
+        <text>{{userData.nickname}}</text>
+      </view>
+      <view class="form-item">
+        <text>姓名</text>
+        <text>{{userData.name}}</text>
+      </view>
+      <view class="form-item">
+        <text>性别</text>
+        <text> {{userData.gender === 'male' ? '男' : (userData.gender === 'female' ? '女' : '')}}</text>
+      </view>
+      <view class="form-item">
+        <text>年龄</text>
+        <text>{{userData.age}}</text>
+      </view>
+      <view class="form-item">
+        <text>学校</text>
+        <text>{{userData.school}}</text>
+      </view>
+      <view class="form-item">
+        <text>入学日期</text>
+        <text>{{userData.enrollmentDates}}</text>
+      </view>
+      <view class="form-item">
+        <text>学年</text>
+        <text>{{userData.year}}</text>
+      </view>
+      <view class="form-item">
+        <text>学号</text>
+        <text>{{userData.number}}</text>
+      </view>
+      <view class="form-item">
+        <text>专业</text>
+        <text>{{userData.major}}</text>
+      </view>
+      <view class="form-item">
+        <text>班级</text>
+        <text>{{userData.class}}</text>
+      </view>
+      <view class="form-item">
+        <text>手机号</text>
+        <text>{{userData.phone}}</text>
+      </view>
+      <button formType="submit" class="save-button">保存</button>
+    </form>
+  </view>
+</view>

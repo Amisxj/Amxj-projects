@@ -1,0 +1,10 @@
+<!--pages/mien/index.wxml-->
+<view>
+  <my-3D
+    disable-scroll
+    id="main-frame"
+    width="{{renderWidth}}"
+    height="{{renderHeight}}"
+    style="width:{{width}}px;height:{{height}}px;"
+  />
+</view>

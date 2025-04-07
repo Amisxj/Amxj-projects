@@ -1,0 +1,5 @@
+/* pages/agreements/user/index.wxss */
+view {
+  width: 100%;
+  height: 60rpx;
+}

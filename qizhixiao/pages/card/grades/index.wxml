@@ -1,0 +1,27 @@
+<!--pages/card/grades/index.wxml-->
+<view class="container">
+  <view class="card news-card">
+    <navigator url="/pages/card/grades/exam/index">
+      <view class="card-header">考试安排</view>
+      <view class="card-content">
+        <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+          <text class="news-time" wx:if="{{item.time.length > 0}}">{{item.time}}\n</text>
+          <text class="news-content">{{item.content}}</text>
+        </view>
+      </view>
+    </navigator> 
+  </view>
+  
+  <view class="card calendar-card">
+    <navigator url="/pages/card/grades/scores/index">
+      <view class="card-header">成绩查询</view>
+      <view class="card-content">
+        <view class="calendar-grades" wx:for="{{grades}}" >
+          <text class="ordinal">{{item.id}}</text>
+          <text class="title">{{item.title}}：</text>
+          <text class="scorce">{{item.scorce}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

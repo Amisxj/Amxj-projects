@@ -1,0 +1,14 @@
+/* pages/settings/index.wxss */
+.quit {
+  position: relative;
+  top: 180rpx;
+  background-color: #7FFFD4;
+  border-radius: 20rpx;
+  border: 1px solid #70bcf6; 
+}
+/* 镂空按钮 点击阴影不宜太深 */
+.quit-hover{
+  position: relative;
+  top: 183rpx;
+  box-shadow:0px 0px 10px #67c4a5 inset; 
+}

@@ -1,0 +1,23 @@
+<!--components/verify/index.wxml-->
+<view class="mask">
+  <view class="container">
+    <text class="title">验证码</text>
+    <text class="tips">验证码已成功发送，请您及时查收！</text>
+    <view style="position:relative">
+      <view class="layout">
+        <input class="inputCode" type="number"/>
+      </view>
+    </view>
+    <view class='agin-send' catchtap="clickAginSend">重新发送?</view>
+    <view class="empty-layout" ></view>
+    <view class="controll-layout">
+      <view class="cancel-button" catchtap="cancel">
+        <text>取消</text>
+      </view>
+      <view class="divider"></view>
+      <view class="sure-button" catchtap="sure">
+        <text>确定</text>
+      </view>
+    </view>
+  </view>
+</view>

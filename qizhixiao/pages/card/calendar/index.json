@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "校园日历",
+  "usingComponents": {
+    "my-calendar": "/components/mine/calendar/index"
+  }
+}

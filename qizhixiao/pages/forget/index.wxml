@@ -1,0 +1,15 @@
+<!--pages/forget/index.wxml-->
+<view class="container">
+  <view class="form">
+    <view class="information">
+      <my-input title="账号" type="number" placeholder="请输入电话号码" maxlength="11"></my-input>
+      <my-input title="新密码" type="password" placeholder="请输入密码"></my-input>
+      <my-input title="再次确认" type="password" placeholder="请再次输入新密码"></my-input>
+    </view>
+    <view>
+      <my-button title="登录" bindtap="showModal"></my-button>
+    </view>
+  </view>
+  <my-verify class="mask"  wx:if="{{showModal}}" bind:cancel="cancel" bind:sure="ok"></my-verify>
+</view>
+

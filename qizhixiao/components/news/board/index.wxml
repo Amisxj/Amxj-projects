@@ -1,0 +1,30 @@
+<!--components/news/board/index.wxml-->
+<view class="container" wx:for="{{news}}" wx:key="index" wx:for-item="item1">
+  <view class="information">
+    <image class="avatar" src="https://www.wumingjie.online/api/images/avatar/{{item1.avatar}}" mode="aspectFill"/>
+    <view class="content">
+      <text class="name">{{item1.name}}</text>
+      <p class="time">{{item1.time}}</p>
+    </view>
+    <view class="{{item1.concerned ? 'signed' : 'sign'}}" bindtap="concern" data-index="{{index}}">
+      {{item1.concerned ? '已关注' : '关注'}}
+    </view>
+  </view>
+  <view class="message">
+    <view wx:if="{{item1.title}}" class="title">
+    </view>
+    <text class="writting">{{item1.writting}}</text>
+    <view wx:if="{{item1.photos}}" class="photos"></view>
+    <view class="address">
+      <image class="icon" src="{{  gps_icon}}" mode="aspectFill"/>
+      <p class="location">{{item1.location}}</p>
+    </view>
+  </view>
+  <view class="label">
+    <view class="items" wx:for="{{labelIcon}}" wx:key="*this" wx:for-item="item2">
+      <image class="label-icon" src="{{item2}}" mode="aspectFill"/>
+      <text class="label-text">{{item1.labelText[index]}}</text>
+    </view>
+  </view>
+  <view class="blanket"></view>
+</view>

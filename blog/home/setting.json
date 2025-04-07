@@ -1,0 +1,46 @@
+{
+    "title": "吴明杰の主页",
+    "description": "一个默默无闻的主页",
+    "keywords": "吴明杰,个人主页",
+    "author": "吴明杰",
+    "logo_img": "./img/icon/logo.png",
+    "logo_text_1": "imsyy",
+    "logo_text_2": "top",
+    "github": "imsyy",
+    "qq": "3252745330",
+    "email": "3252745330@qq.com",
+    "bilibili": "511294893",
+    "telegram": "bottom_user",
+    "link_1": [
+        "https://www.wumingjie.online/blog/",
+        "fa-solid fa-blog",
+        "博客"
+    ],
+    "link_2": [
+        "https://pan.baidu.com/s/1HL6ks9bUmz8A8ywNq3Tj3Q?pwd=Amxj",
+        "fa-solid fa-cloud",
+        "网盘"
+    ],
+    "link_3": [
+        "https://www.wumingjie.online/blog/",
+        "fa-solid fa-music",
+        "音乐"
+    ],
+    "link_4": [
+        "https://www.wumingjie.online/blog/",
+        "fa-solid fa-compass",
+        "起始页"
+    ],
+    "link_5": [
+        "https://web.imsyy.top/",
+        "fa-solid fa-book-bookmark",
+        "网址集"
+    ],
+    "link_6": [
+        "https://www.qiyishu.online/",
+        "fa-solid fa-flask",
+        "馋点网"
+    ],
+    "Copyright_text": "吴明杰",
+    "beian": "渝ICP备2022018134号-1"
+}

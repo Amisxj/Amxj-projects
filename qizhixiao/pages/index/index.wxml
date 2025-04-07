@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <my-swiper images="{{images}}"></my-swiper>
+  <my-lattice list="{{latticeImages}}"></my-lattice>
+  <view class="transition">
+    大咖讲座
+  </view>
+  <my-lecture cardList="{{cardList}}"></my-lecture>
+</view>
+<!-- <page-meta>
+  <my-navbar></my-navbar>
+</page-meta> -->

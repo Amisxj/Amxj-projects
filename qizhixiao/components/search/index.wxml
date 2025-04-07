@@ -1,0 +1,21 @@
+<!--components/search/index.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="classify" bind:tap="show">
+      分类
+      <image class="downIcon" src="{{downIcon}}" mode="aspectFill"/>
+    </view>
+    <view class="find">
+      <view class="findIn">
+        <image class="searchIcon" src="{{seacrhIcon}}"></image>
+        <input class="search" type="text" placeholder=" 请输入搜索内容"/>
+        <view class="searchBtn" bind:tap="search">搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class="content" wx:if="{{showMenu}}">
+    <view wx:for="{{classify}}" wx:key="index" class="card" bind:tap='choose' data-classify="{{item}}">
+      <view class="circle{{item == chooseItem?'active':''}}">{{item}}</view>
+    </view>
+  </view>
+</view>

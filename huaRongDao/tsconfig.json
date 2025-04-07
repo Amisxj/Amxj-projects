@@ -1,0 +1,11 @@
+{
+  /* Base configuration. Do not edit this field. */
+  "extends": "./temp/tsconfig.cocos.json",
+
+  /* Add your custom configuration here. */
+  "compilerOptions": {
+    "strict": false,
+    "target": "es2015" , 
+    "lib": ["es2016", "dom", "es5"] // 混合配置以兼容新旧语法
+  }
+}

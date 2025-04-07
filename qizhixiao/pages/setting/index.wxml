@@ -1,0 +1,4 @@
+<!--pages/settings/index.wxml-->
+<my-setting class="orther" items="{{more}}" title="设置" iconsrc="../../../static/mine/right2.png" address='{{address}}'></my-setting>
+<button class="quit" bindtap="showToast"  hover-class="quit-hover">退出账号</button>
+<my-tooltip id="toast" show="{{toastShow}}" content="{{toastContent}}"></my-tooltip>

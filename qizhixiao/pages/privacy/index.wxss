@@ -1,0 +1,25 @@
+/* pages/privacy/index.wxss */
+.container {
+  height: auto;
+  padding: 20rpx;
+}
+.container .form {
+  width: 100%;
+  background-color: white;
+  border-radius: 10rpx;
+}
+.form .form-item {
+  width: auto;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(223, 223, 223, 0.425);
+}
+.form-item .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}

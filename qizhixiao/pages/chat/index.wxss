@@ -1,0 +1,4 @@
+/* pages/chat/index.wxss */
+page {
+  background-color: rgb(250, 248, 248);
+}

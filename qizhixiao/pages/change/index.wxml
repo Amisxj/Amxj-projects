@@ -1,0 +1,30 @@
+<!--pages/change/index.wxml-->
+<view class="navbar">
+  <view class="top">
+    <view class="find">
+      <view class="findIn">
+        <image class="searchIcon" src="/static/team/search.png"></image>
+        <input class="search" type="text" placeholder="请输入搜索内容" bindinput="onSearchInput" />
+        <view class="searchBtn" bind:tap="onSearch">搜索</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="classify">
+  <view class="category{{item.name == currentCategory ? 'active' : ''}}" wx:for="{{categories}}" wx:key="name" data-id="{{item.name}}" bindtap="onCategoryTap">
+    {{item.name}}
+  </view>
+</view>
+
+<view class="goods">
+  <view class="card" wx:for="{{filteredItems}}" wx:key="id">
+    <view class="img">
+      <image class="image" src="{{item.imgUrl}}" />
+    </view>
+    <view class="discription">
+      <text class="price">￥{{item.price}}</text>
+      <text class="title">{{item.title}}</text>
+    </view>
+  </view>
+</view>

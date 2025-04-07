@@ -1,0 +1,24 @@
+<xr-scene>
+  <xr-light type="ambient" color="1 1 1" intensity="1" />
+  <xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
+
+  <xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded">
+    <!-- 加载背景图片纹理资源 -->
+    <xr-asset-load type="texture" src="https://www.wumingjie.online/api/glb/runway.png" asset-id="backgroundTexture" width="2048" height="1024"/>
+    <!-- 加载模型资源 -->
+    <xr-asset-load type="gltf" src="https://www.wumingjie.online/api/glb/car.glb" asset-id="car" />
+  </xr-assets>
+
+  <!-- 设置背景纹理 -->
+  <xr-env sky-map="backgroundTexture" uniforms="u_scale: 2 2" width="2048" height="1024"/>
+
+  <!-- 实例化glTF模型 -->
+  <xr-gltf node-id="car" model="car" position="0 0 2" scale="0.5 0.5 0.5" rotation="0 0 0"/>
+
+  <!-- 添加坐标轴 -->
+  <xr-mesh node-id="x-axis" geometry="line" material="basic" uniforms="u_color: 1 0 0 1" position="0 0 0" scale="5 1 1" rotation="0 0 0"/>
+  <xr-mesh node-id="y-axis" geometry="line" material="basic" uniforms="u_color: 0 1 0 1" position="0 0 0" scale="1 5 1" rotation="0 0 90"/>
+  <xr-mesh node-id="z-axis" geometry="line" material="basic" uniforms="u_color: 0 0 1 1" position="0 0 0" scale="1 1 5" rotation="0 90 0"/>
+
+  <xr-camera clear-color="0.4 0.8 0.6 1" position="0 0 10" target="car" background="skybox" camera-orbit-control />
+</xr-scene>

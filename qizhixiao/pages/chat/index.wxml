@@ -1,0 +1,3 @@
+<!--pages/chat/index.wxml-->
+<my-chat messages="{{messages}}" toBottomId="{{toBottomId}}"  my-avatar="{{myAvatar}}" friend-avatar="{{friendAvatar}}"  bindupdatemessages="UpdateMessages" keyboard="true" adjust-position="false"  distance="100" >  </my-chat>
+

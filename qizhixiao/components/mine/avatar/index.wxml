@@ -1,0 +1,32 @@
+<!--components/mine/avatar/index.wxml-->
+<!-- 登录 -->
+<view class="container" wx:if="{{loging}}">
+  <view class="img">
+    <image class="headshot" src="{{avatar}}" mode="aspectFill" ></image>
+  </view>
+  <view class="touchpad" bindtap="onTap">
+    <view class="information">
+      <view class="content">
+        <text class="name">{{name}}</text>
+        <!-- 根据性别显示不同的图片 -->
+        <image class="gender" wx:if="{{gender === 'male'}}" src="/static/team/male.png"></image>
+        <image class="gender" wx:if="{{gender === 'female'}}" src="/static/team/female.png"></image>
+      </view>  
+      <text class="number">{{account}}</text>
+    </view>
+    <view class="icon">
+      <image class="next" src="/static/mine/right.png" ></image>
+    </view>
+  </view>
+</view>
+<!-- 未登录 -->
+<view class="container" wx:else="{{loging}}">
+  <view class="img">
+    <image class="headshot" src="{{avatar}}" mode="aspectFill"/>
+  </view>
+  <view class="need">
+    <navigator class="login switch" url="/pages/login/index">登录</navigator>
+    <span>|</span>
+    <navigator class="register switch" url="/pages/register/index">注册</navigator>
+  </view>
+</view>

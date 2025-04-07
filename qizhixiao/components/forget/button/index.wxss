@@ -1,0 +1,16 @@
+/* components/button/index.wxss */
+.button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40rpx;
+  text-align: center;
+  background-color: #7FFFD4 !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+  border: 2rpx solid #dcdfe6 !important;
+  border-radius: 10px;
+}

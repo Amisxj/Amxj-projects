@@ -1,0 +1,23 @@
+/* components/lattice/index.wxss */
+.container{
+  display: flex;
+  width: 100%;
+  height: 250rpx;
+  margin-top: 10rpx;
+}
+.lattice{
+  width: 25%;
+  height: 100%;
+  text-align: center;
+}
+.lattice-image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 10rpx;
+}
+.lattice-text{
+  display:flex;
+  justify-content:center;
+  color: #000000;
+  font-size: 14px;
+}

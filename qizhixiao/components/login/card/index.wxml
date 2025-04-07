@@ -1,0 +1,30 @@
+<!--components/login/card/index.wxml-->
+<view class="container">
+  <form class="form" bindsubmit="formSubmit">
+    <view class="first">
+        <view class="text">
+          账号：
+        </view>
+        <input name="account" class="account" type="number" maxlength="18" placeholder-class="placeholder-style" placeholder="请输入账号" bindinput="inputAccount"/>
+        <image class="eyes"   class='imageStyle' bindtap='eyeStatus'></image>
+    </view>
+    <view class="first">
+        <view class="text">
+          密码：
+        </view>
+        <input name="password" class="account" password="{{passwordType}}" maxlength="18"  placeholder-class="placeholder-style" placeholder="请输入密码" bindinput="inputPassword"/>
+        <image class="eyes" src='{{defaultType? "../../../static/login/eye1.png": "../../../static/login/eye2.png"}}'  bindtap="eyeStatus" hidden="{{!showImg}}"></image>
+    </view>
+    <view class="agree">
+      <radio class="radio" checked="{{checked}}" bindtap="checkedTap"></radio>同意
+      <navigator class="userpage" url="/pages/agreements/privacy/index">《用户协议》</navigator>
+      和
+      <navigator class="privacypage" url="/pages/agreements/privacy/index">《隐私政策》</navigator>
+    </view>
+    <button class="login" formType="submit">登录</button>
+  </form>
+  <view class="bottom">
+    <view class="forget"><navigator url="/pages/forget/index">忘记账号/密码</navigator></view>
+    <view class="regist"><navigator url="/pages/register/index">还未注册</navigator></view>
+  </view>
+</view>

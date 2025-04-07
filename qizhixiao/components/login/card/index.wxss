@@ -1,0 +1,92 @@
+/* components/login/card/index.wxss */
+.container {
+  width: 600rpx;
+  height: 800rpx;
+  border-radius: 20rpx;
+  border-color: black;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+form .first {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.first .text {
+  width: 120rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+form input {
+  width: 400rpx;
+  height: 100%;
+  border-bottom: solid;
+  text-align: center;
+  box-sizing: border-box;
+}
+form image {
+  width: 50rpx;
+  height: 50rpx;
+}
+form .agree {
+  display: flex;
+  width: 100%;
+  font-size: 20rpx;
+}
+form navigator {
+  display: flex;
+  float: left;
+}
+form .agree {
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  top: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .userpage,.privacypage{
+  color: rgb(173, 33, 33);
+}
+form .login {
+  display: block;
+  position: relative;
+  top: 140rpx;
+  background-color: #7FFFD4;
+  color: black;
+  padding: 10px 0;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 90%;
+  overflow: hidden;
+}
+.bottom {
+  display: flex;
+  position: relative;
+  top: 180rpx;
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between; /* 子元素左右分布 */
+  align-items: center; /* 垂直居中 */
+  padding: 50rpx; /* 外部盒子的内边距 */
+  box-sizing: border-box; /* 盒模型 */
+}
+.bottom .forget,.regist {
+  width: auto; /* 内部盒子的宽度 */
+  height: auto; /* 内部盒子的高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

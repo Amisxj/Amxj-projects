@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-input": "/components/forget/input/index",
+    "my-button": "/components/forget/button/index",
+    "my-verify": "/components/forget/verify/index"
+  }
+}

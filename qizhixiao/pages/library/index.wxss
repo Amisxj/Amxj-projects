@@ -1,0 +1,80 @@
+/* pages/library/index.wxss */
+.container {
+  display: flex;
+}
+.selection {
+  width: 30%;
+  border-right: 1rpx solid #ccc;
+}
+.selection .choose {
+  width: 100%;
+  height: 150rpx;
+}
+
+.choose radio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose radio .wx-radio-input  {
+  width: 0rpx; /* 自定义大小 */
+  height: 0rpx; /* 自定义大小 */
+  font-size: 0rpx;
+  background-color: transparent; /* 背景透明 */
+  border: none;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  /* 去除对号 */
+  content: ''; 
+}
+
+.choose radio .wx-radio-input.wx-radio-input-checked {
+  width: 30rpx; /* 自定义大小 */
+  height: 30rpx; /* 自定义大小 */
+  background-color: #7FFFD4; /* 自定义颜色 */
+  border-radius: 50%; /* 圆形 */
+}
+
+.content {
+  width: 90%;
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffff;
+}
+.card {
+  width: 48%; /* 使得一行可以容纳两个卡片 */
+  height: 80rpx;
+  margin-bottom: 15rpx; /* 卡片之间的垂直间距 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10rpx;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}

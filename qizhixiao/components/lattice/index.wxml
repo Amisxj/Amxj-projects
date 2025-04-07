@@ -1,0 +1,7 @@
+<!--components/lattice/index.wxml-->
+<view class="container">
+  <view class="lattice" wx:for="{{list}}" wx:key="*this">
+    <image class="lattice-image" src="{{item.image}}" bind:tap="changeLink" data-id="{{item.link}}"/>
+    <text class="lattice-text">{{item.text}}</text>
+  </view>
+</view>

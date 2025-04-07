@@ -1,0 +1,112 @@
+<!--pages/card/leave/index.wxml-->
+<view class="container">
+  <form class="leave">
+    <view class="category leave-item">
+      <view>请假类型</view>
+      <view class="picker" bindtap="onPickerTap">
+        <text>{{leaveTypes[leaveTypeIndex]}}</text>
+        <image src="/static/card/leave/down.png" class="picker-arrow" />
+      </view>
+      <!-- 自定义下拉选择器 -->
+      <view wx:if="{{showPicker}}" class="picker-container" bindtap="onPickerContainerTap">
+        <view class="picker-list">
+          <view wx:for="{{leaveTypes}}" wx:key="index" class="picker-item" bindtap="onPickerItemTap" data-index="{{index}}">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="beginDateTime leave-item">
+      <text>开始时间</text>
+      <view class="dateTimeContainer benginDateTimeContainer">
+        <picker class="picker-beginDate picker-DateTime" mode="date" value="{{beginDate}}" bindchange="bindBeginDateChange" start="1900-01-01" end="2100-12-31" >
+          <view class="beginDate DateTime">
+            {{beginDate || '请选择日期'}} <!-- 如果datetime为空，则显示'请选择时间' -->
+            <image src="/static/card/leave/triangle.png"  class="time-picker-icon" /> <!-- 替换为你的时间选择器图标 -->
+          </view>
+        </picker>
+        <picker class="picker-beginTime picker-DateTime" mode="time" value="{{beginTime}}"  bindchange="bindBeginTimeChange" >
+          <view class="beginTime DateTime">
+            {{beginTime || '时间'}} <!-- 如果datetime为空，则显示'请选择时间' -->
+            <image src="/static/card/leave/triangle.png" class="time-picker-icon" /> <!-- 替换为你的时间选择器图标 -->
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="endDateTime leave-item">
+      <text>结束时间</text>
+      <view class="dateTimeContainer endDateTimeContainer">
+        <picker class="picker-beginDate picker-DateTime" mode="date" value="{{endDate}}" bindchange="bindEndDateChange" start="1900-01-01" end="2100-12-31" >
+          <view class="endDate DateTime">
+            {{endDate || '请选择日期'}} <!-- 如果datetime为空，则显示'请选择时间' -->
+            <image src="/static/card/leave/triangle.png"  class="time-picker-icon" /> <!-- 替换为你的时间选择器图标 -->
+          </view>
+        </picker>
+        <picker class="picker-beginTime picker-DateTime" mode="time" value="{{endTime}}"  bindchange="bindEndTimeChange" >
+          <view class="endTime DateTime">
+            {{endTime || '时间'}} <!-- 如果datetime为空，则显示'请选择时间' -->
+            <image src="/static/card/leave/triangle.png" class="time-picker-icon" /> <!-- 替换为你的时间选择器图标 -->
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="switch-container leave-item">
+      <text>需要离校</text>
+      <switch bindchange="onSwitchChange" checked="{{leaveCampus}}"/>
+    </view>
+    <view class="phone-container leave-item">
+      <text>个人手机号</text>
+      <input class="hidden-input" type="number" placeholder="请输入个人电话" value="{{personalPhone}}" bindinput="bindpersonalPhoneInput" maxlength="11"/>
+    </view>
+    <view class="phone-container leave-item">
+      <text>紧急联系人</text>
+      <input class="hidden-input" type="number" placeholder="请输入联系人电话" value="{{emergencyPhone}}" bindinput="bindemergencyPhoneInput" maxlength="11"/>
+    </view>
+    <view class="reason-container">
+      <view class="reason-text">
+        <text>请假原因</text>
+        <textarea 
+          class="reason-textarea" 
+          placeholder="请输入请假原因" 
+          maxlength="100" 
+          bindinput="bindReasonInput" 
+          value="{{reason}}"
+        >{{reason}}</textarea>
+        <view class="count">{{reason.length}}/100</view>
+      </view>
+      <view class="upload-container">
+        <text class="text">添加附件</text>
+        <!-- 图片预览 -->
+        <view class="imageContainer">
+          <view class="preview-container" wx:if="{{imagePaths.length > 0}}">
+            <block wx:for="{{imagePaths}}" wx:key="unique">
+              <image class="preview-image" src="{{item}}" mode="aspectFill" />
+              <view class="delete-btn" bindtap="deleteImage" data-index="{{index}}">
+                <image src="/static/card/leave/delete.png" mode="aspectFill" ></image>
+              </view>
+            </block>
+          </view>
+          <!-- 添加图片按钮 -->
+          <view class="addImage" wx:if="{{imagePaths.length < 4}}" bindtap="chooseMedia">
+            <image src="/static/card/leave/upload.png"></image>
+            <text>{{imagePaths.length}}/4</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="counsellor">
+      <text>辅导员</text>
+      <picker class="picker" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{newArr}}">
+        <view class="picker-counsellor">
+          <text>{{newArr[2][multiIndex[2]]}}</text>
+          <image class="image" src="/static/card/leave/down.png"></image>
+        </view>
+      </picker>  
+    </view>
+    <view class="submit-button-container" bindtap="onSubmitTap">
+      <view class="submit-button">
+        提交
+      </view>
+    </view>
+  </form>
+</view>
+
+

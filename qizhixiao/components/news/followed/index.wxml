@@ -1,0 +1,14 @@
+<!--components/news/Followed/index.wxml-->
+<view class="watch-list-container">
+  <scroll-view class="watch-list" scroll-y="true">
+    <block wx:for="{{watchList}}" wx:key="id">
+      <view class="watch-item"  data-id="{{item.id}}" >
+        <image class="avatar" src="{{item.avatarUrl}}" />
+        <view class="watch-info">
+          <view class="name">{{item.name}}</view>
+          <view class="watch-weather" bindtap="cancel">取消关注</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

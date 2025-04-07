@@ -1,0 +1,72 @@
+/* pages/card/grades/index.wxss */
+.container {
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.news-time {
+  font-size: 16px;
+  color: #333;
+}
+
+.news-content {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.calendar-grades {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ordinal {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.title {
+  width: 560rpx;
+  height: 40rpx;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+.title , .scorce {
+  line-height: 30rpx;
+}
+.scorce {
+  font-size: 40rpx;
+}

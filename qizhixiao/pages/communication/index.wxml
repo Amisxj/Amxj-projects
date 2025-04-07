@@ -1,0 +1,13 @@
+<!--pages/communication/index.wxml-->
+<view class="tabs">
+  <view class="tab-item {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">全部消息</view>
+  <view class="tab-item {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">已关注</view>
+</view>
+<swiper class="content-swiper" current="{{currentTab}}" bindchange="onSwiperChange" >
+  <swiper-item>
+    <my-interface id="news-interface"></my-interface>
+  </swiper-item>
+  <swiper-item>
+    <my-followed id="news-followed"></my-followed>
+  </swiper-item>
+</swiper>

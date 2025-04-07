@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-3D": "/components/threeDimensional/index"
+  },
+  "disableScroll": true
+}

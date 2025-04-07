@@ -1,0 +1,14 @@
+<!--components/mine/orther/index.wxml-->
+<view class="container">
+  <view class="blanket"></view>
+  <view class="none"></view>
+  <p>{{title}}</p>
+  <view class="item" wx:for="{{items}}" wx:key="*this" bind:tap="morePage" data-index="{{index}}">  
+    <view class="img">
+      <image class="menu" src="{{item.src}}" mode="aspectFill"></image>
+    </view>
+    <text class="writting">{{item.text}}</text>
+    <image class="icon" src="{{iconsrc}}"></image>
+  </view>
+  <view class="end"></view>
+</view>

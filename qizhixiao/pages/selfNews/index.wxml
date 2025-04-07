@@ -1,0 +1,3 @@
+<!--pages/self/index.wxml-->
+<my-chat></my-chat>
+<my-news></my-news>

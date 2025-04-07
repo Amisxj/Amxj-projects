@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-search": "/components/search/index",
+    "my-team": "/components/team/join/index"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/link/index",
+    "pages/everyday/index",
+    "pages/communication/index",
+    "pages/chat/index",
+    "pages/mine/index",
+    "pages/privacy/index",
+    "pages/books/index",
+    "pages/change/index",
+    "pages/mien/index",
+    "pages/map/index",
+    "pages/test/index",
+    "pages/card/class/index",
+    "pages/team/index",
+    "pages/setting/index",
+    "pages/schoolNews/index",
+    "pages/card/leave/index",
+    "pages/card/grades/scores/index",
+    "pages/login/index",
+    "pages/card/grades/index",
+    "pages/library/index",
+    "pages/forget/index",
+    "pages/selfNews/index",
+    "pages/register/index",
+    "pages/contact/index",
+    "pages/card/calendar/index",
+    "pages/agreements/user/index",
+    "pages/agreements/privacy/index",
+    "pages/card/grades/exam/index",
+    "pages/food/index",
+    "pages/detail/goods/index",
+    "pages/detail/lecture/index"
+  ],
+  "tabBar": {
+    "selectedColor": "#00FFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/tabbar/home.png",
+        "selectedIconPath": "/static/tabbar/home-after.png"
+      },
+      {
+        "pagePath": "pages/team/index",
+        "text": "组团",
+        "iconPath": "/static/tabbar/team.png",
+        "selectedIconPath": "/static/tabbar/team-after.png"
+      },
+      {
+        "pagePath": "pages/schoolNews/index",
+        "text": "校闻",
+        "iconPath": "/static/tabbar/news.png",
+        "selectedIconPath": "/static/tabbar/news-after.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/static/tabbar/mine.png",
+        "selectedIconPath": "/static/tabbar/mine-after.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "綦智校",
+    "navigationBarBackgroundColor": "#7FFFD4"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取用户位置信息用于查询地点"
+    }
+  }
+}

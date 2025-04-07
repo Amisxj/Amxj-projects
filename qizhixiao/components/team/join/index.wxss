@@ -1,0 +1,133 @@
+/* components/team/join/index.wxss */
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-bottom:solid 1rpx rgb(199, 199, 199);
+}
+.information {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  border-radius: 50rpx;
+}
+.individual {
+  width: 30%;
+  height: 100rpx;
+  position: relative;
+  left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  width:150rpx;
+  height: 50%;
+  line-height: 50rpx;
+}
+.sex {
+  width: 50rpx;
+  height: 50%;
+}
+.people {
+  width: auto;
+  height: 60rpx;
+  position: absolute;
+  right: 20rpx;
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  letter-spacing: 4rpx; 
+  border-radius: 15rpx; 
+  background: #ffffff;
+}
+.message {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title  {
+  width: auto;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.content {
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 10rpx;
+  left: 10%;
+  display: block;
+  overflow: hidden;
+}
+.definite {
+  width: 80%;
+  height: 50rpx;
+  position: relative;
+  margin-top: 30rpx;
+  left: 10%;
+  align-items: center;
+  display: flex;
+}
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.word {
+  width: auto;
+  height: 30rpx;
+  position: relative;
+  top: -5rpx;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+}
+.when-right {
+  position: absolute;
+  right: 10rpx;
+}
+.join-number {
+  width: 80%;
+  height: 120rpx;
+  position: relative;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join-number .number {
+  width: 100rpx;
+  height: 100rpx;
+  background: white;
+  border-radius: 100rpx;
+  margin-left: 10rpx;
+  border: 1rpx  solid #7FFFD4;
+}
+.choose {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+}
+.join,.share {
+  width: 200rpx !important;
+  font-size: 25rpx;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  position: relative;
+}
+.operate:active {
+  top: 3rpx;
+  background:  rgb(236, 179, 156);
+}

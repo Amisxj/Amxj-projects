@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-chat":"/components/self/chat/index"
+  }
+}

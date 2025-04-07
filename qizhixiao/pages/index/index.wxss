@@ -1,0 +1,13 @@
+/**index.wxss**/
+page{
+  background: #f8f8f8;
+}
+.transition {
+  width: 100%;
+  height: 100rpx;
+  background-color: #a9fadf;
+  border: 1rpx solid #70d1b1;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

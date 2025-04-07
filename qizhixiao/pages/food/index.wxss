@@ -1,0 +1,4 @@
+/* pages/food/index.wxss */
+page {
+  background-color: #fff;
+}

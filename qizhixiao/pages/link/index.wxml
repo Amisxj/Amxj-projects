@@ -1,0 +1,11 @@
+<!-- pages/link/index.wxml -->
+<view class="container">
+  <movable-area class="movable-area">
+    <movable-view class="pet" direction="all" bindtouchstart="onTouchStart" bindchange="onMove" bindtouchend="onTouchEnd" bindlongpress="onLongPress">
+      <view class="dialog" wx:if="{{dialog}}" style="{{dialogStyle}}">
+        <text>{{dialog}}</text>
+      </view>
+      <image class="pet-image" src="{{currentFrame}}" animation="{{animationData}}"></image>
+    </movable-view>
+  </movable-area>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/login/index.wxml-->
+<view class="container">
+    <my-card ></my-card>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "xr-start": "/components/test/index"
+  },
+  "disableScroll": true
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-swiper": "/components/swiper/index",
+    "my-lattice": "/components/lattice/index",
+    "my-lecture": "/components/index/lecture/index"
+  }
+}

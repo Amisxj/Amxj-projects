@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-card": "/components/mine/card/index",
+    "my-avatar": "/components/mine/avatar/index",
+    "my-orther": "/components/mine/orther/index"
+  }
+}

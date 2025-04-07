@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-card": "/components/login/card/index"
+  }
+}

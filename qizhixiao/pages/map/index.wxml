@@ -1,0 +1,36 @@
+<!--pages/map/index.wxml-->
+<view class="container">
+  <view class="map">
+    <map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="18" show-location markers="{{markers}}" bindmarkertap="onMarkerTap"></map>
+    <view class="locate-view" bindtap="locateToMe"><image src="/static/map/my-location.png" mode="aspectFit" /></view>
+  </view>
+  
+  <block wx:if="{{!showBuilding}}">    
+      <view class="schoolImage">
+        <image src="{{schoolMap}}" mode="aspectFill" bindtap="clickImg" />
+      </view>
+  </block>
+
+  <block wx:if="{{showBuilding}}">
+    <block wx:if="{{currentBuilding}}">
+      <view class="currentBuilding">
+        <view class="top" wx:if="{{currentBuilding && currentBuilding.name}}">
+            <text>建筑名称：{{currentBuilding.name}}</text>
+          </view>
+        <view class="detail" style="background-image: url('{{currentBuilding.img}}');">
+          <view class="floor" wx:for="{{currentBuilding.floors}}" wx:key="name">
+            <view class="floorName">
+              <text class="floor-name">{{item.floor}}</text>
+              <view class="facilities">
+                <text class="functionRoom" wx:for="{{item.name}}" wx:key="index">{{item}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <view class="toggle-button" bindtap="toggleView" wx:if="{{currentBuilding}}">
+    <image src="{{showBuilding ? '/static/map/handoff1.png' : '/static/map/handoff2.png'}}" />
+  </view>
+</view>

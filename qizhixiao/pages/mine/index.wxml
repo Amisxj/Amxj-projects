@@ -1,0 +1,7 @@
+<!--pages/mine/index.wxml-->
+<view class="container"> 
+  <my-avatar class="topinformation" avatar="{{avatar}}" name="{{name}}" account="{{account}}" gender="{{gender}}" loging="{{isLogged}}" ></my-avatar>
+  <my-card class="card" items="{{teamlist}}" ></my-card>
+  <my-orther class="orther" items="{{more}}" title="问题请反馈联系人:1532074746" iconsrc="../../../static/mine/right2.png" address='{{address}}'> 
+  </my-orther>
+</view>

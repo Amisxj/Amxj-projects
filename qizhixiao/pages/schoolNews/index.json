@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-board": "/components/news/board/index"
+  }
+}

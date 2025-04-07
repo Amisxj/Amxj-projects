@@ -1,0 +1,17 @@
+<!--components/news/interface/index.wxml-->
+<view class="chat-list-container">
+  <scroll-view class="chat-list" scroll-y="true">
+    <block wx:for="{{chatList}}" wx:key="id">
+      <view class="chat-item" bindtap="goToChat" data-id="{{item.conversation_id}}" data-name="{{item.name}}">
+        <image class="avatar" src="{{item.avatarUrl}}" />
+        <view class="chat-info">
+          <text class="name">{{item.name}}</text>
+          <view class="last-message">
+            <text class="content">{{item.lastMessage}}</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/test/index.wxml-->
+<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="16" show-location markers="{{markers}}" bindmarkertap="markertap"></map>

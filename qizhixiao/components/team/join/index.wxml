@@ -1,0 +1,38 @@
+<!--components/team/join/index.wxml-->
+<view class="container" wx:for="{{team}}" wx:key="index" wx:for-item="item">
+  <view class="information">
+    <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+    <view class="individual">
+      <text class="name">{{item.name}}</text>
+      <image class="sex" src="/static/team/{{item.sex}}.png" mode="aspectFill"></image>
+    </view>
+    <text class="people">人数：{{item.people}}</text>
+  </view>
+  <view class="message">
+    <view class="title">{{item.message.title}}</view>
+    <text class="content">{{item.message.content}}</text>
+    <view class="definite">
+      <view class="where">
+        <image class="icon" src="{{whereIcon}}" mode="aspectFill"></image>
+        <text class="word">{{item.message.where}}</text>
+      </view>
+      <view class="when when-right">
+        <image class="icon" src="{{whenIcon}}" mode="aspectFill"></image>
+        <text class="word">{{item.message.when}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="join-number" >
+    <image class="number" wx:for="{{item.joinPeople}}" wx:for-item="item1" wx:key="index" wx:if="{{item.joinPeople.length <= item.people && item.people <= 5}}" src="https://www.wumingjie.online/api/images/{{item.joinPeople[index]}}"  mode=""></image>
+    <image class="number" wx:for="{{item.people - item.joinPeople.length}}" wx:for-item="item1" wx:key="index" wx:if="{{item.joinPeople.length <= item.people && item.people <= 5}}" src="/static/team/join.png" mode=""></image>
+    <image class="number" wx:for="{{4}}" wx:for-item="item2" wx:key="index" wx:if="{{5 <= item.joinPeople.length && item.joinPeople.length <= item.people && item.people > 5 }}" src="{{item.joinPeople[index]}}" mode=""></image>
+    <image class="number" wx:for="{{item.joinPeople}}" wx:for-item="item2" wx:key="index" wx:if="{{item.joinPeople.length < 5 && item.joinPeople.length < item.people && item.people > 5 }}" src="{{item.joinPeople[index]}}" mode=""></image>
+    <image class="number" wx:for="{{5 - item.joinPeople.length}}" wx:for-item="item3" wx:key="index" wx:if="{{ item.joinPeople.length < 5 && item.joinPeople.length < item.people  && item.people > 5 }}" src="/static/team/join.png" mode=""></image>
+    <image class="number" wx:for="{{1}}" wx:for-item="item4" wx:key="index" wx:if="{{5 <= item.joinPeople.length && item.joinPeople.length < item.people  && item.people > 5 }}" src="/static/team/join.png" mode=""></image>
+    <image class="number" wx:for="{{1}}" wx:for-item="item5" wx:key="index" wx:if="{{item.joinPeople.length === item.people && item.people > 5 }}" src="/static/team/full.png" mode=""></image>
+  </view>
+  <view class="choose">
+    <button class="operate share">分享他人</button>
+    <button class="operate join" data-teamId="{{item.id}}" data-team="{{item}}"  bindtap="joinTeam">{{item.isJoined ? '取消加入' : '加入团队'}}</button>
+  </view>
+</view>

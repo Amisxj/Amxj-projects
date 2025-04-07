@@ -1,0 +1,30 @@
+<!--pages/books/index.wxml-->
+<view class="book-list">
+  <block wx:for="{{books}}" wx:key="id">
+    <view class="book-item">
+      <view class="img">
+        <image class="image" src="{{item.image}}" />
+      </view>
+      <view class="book-info">
+        <view class="header">
+          <text class="title">{{item.title}}</text>        
+          <text class="rating">{{item.rating}}分</text>
+        </view>
+        <view class="content">
+          <text class="description">{{item.description }}</text>
+          <view class="detail">
+            <text class="author">作者：{{item.author}}</text>
+            <text class="category">分类: {{item.category}}</text>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="leaderboard" wx:if="{{item.leaderboard}}" >{{item.leaderboard}}</view>
+          <view class="ranking" wx:if="{{item.ranking}}" >第{{item.ranking}}名</view>
+          <view class="reads">
+            阅读量：{{item.reads}}
+          </view>
+        </view>
+      </view> 
+    </view>
+  </block>
+</view>

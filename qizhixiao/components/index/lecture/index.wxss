@@ -1,0 +1,70 @@
+/* components/index/lecture/index.wxss */
+.card {
+  width: 600rpx;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  margin-top: 10rpx;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bolder;
+}
+
+.card-content {
+  width: auto;
+  padding: 10rpx;
+  display: flex;
+}
+
+.card-avatar {
+  display: block;
+  width: 150rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.card-name {
+  display: flex;
+  justify-content: center;
+  border: 1rpx solid rgb(245, 142, 147);
+  border-radius: 10rpx;
+}
+.card-text {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items:center; 
+  justify-content:center; 
+}
+.card-time-location {
+  width: 100%;
+  height: 100rpx;
+  font-size: 15px;
+  text-align: center;
+  line-height: 50rpx;
+  color: #666;
+}
+.card-time {
+  width: 100%;
+  margin-top: 40rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.line{
+  border: 0.5rpx solid rgb(177, 177, 177);
+}

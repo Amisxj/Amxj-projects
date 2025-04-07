@@ -1,0 +1,2 @@
+<!--pages/card/calendar/index.wxml-->
+<my-calendar term="2024-2025-1" termStart="2024-09-16" weekCount="29" vacationStart="24"></my-calendar>

@@ -1,0 +1,19 @@
+<!--components/self/chat/index.wxml-->
+<view class="chat-container">
+  <scroll-view scroll-y="true" scroll-into-view="{{toBottomId}}" style="height: calc(100% - {{bottom}}rpx);">
+    <block wx:for="{{messages}}" wx:key="index" >
+      <view class="message-item {{item.mine ? 'mine' : 'other'}}" id="msg-{{index}}" >
+        <image class="avatar" hidden="{{item.mine}}"  src="{{item.mine ? myAvatar : friendAvatar}}"/>
+        <view class="message-content">
+          <text>{{item.text}}</text>
+        </view>
+        <text class="time" wx:if="{{item.showTime}}">{{item.timeFormatted}}</text>
+        <image class="avatar" hidden="{{!item.mine}}"  src="{{item.mine ? myAvatar : friendAvatar}}" />
+      </view>
+    </block>
+  </scroll-view>
+  <view class="input-area" style="bottom: {{bottom}}px;">
+    <input class="input-message" type="text" placeholder="输入消息..." value="{{inputValue}}" bindinput="inputMessage" bindconfirm="sendMessage" focus="{{focus}}" hold-keyboard="true" adjust-position="{{auto}}" bindfocus="onFocus"  bindblur="onInputBlur" />
+    <button class="send-button" style="width: 200rpx;" bindtap="sendMessage">发送</button>
+  </view>
+</view>

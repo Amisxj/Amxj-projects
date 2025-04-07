@@ -1,0 +1,87 @@
+/* components/self/chat/index.wxss */
+.chat-container {
+  height: 900rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-item {
+  display: flex;
+  margin: 20rpx 10rpx;
+}
+
+.message-item.mine {
+  justify-content: flex-end;
+}
+
+.message-item.other {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.message-content {
+  display: flex; /* 使用Flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: auto;
+  height: auto; /* 容器高度 */
+  max-width: 400rpx; /* 容器宽度 */
+  border: 1px solid #ccc; /* 边框，仅用于演示 */
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+.time {
+  display: bl ock;
+  width: 100%;
+  height: 20rpx;
+  background-color: yellow;
+}
+.message-content text {
+  display: -webkit-box;      /* 定义为弹性盒子 */
+  -webkit-box-orient: vertical;    /* 子元素排列方式为竖直 */
+  -webkit-line-clamp: 4;    /* 限定最大显示行数 */
+  overflow: hidden;            /* 超出隐藏 */
+  /* text-overflow: ellipsis;  超出部分显示省略号 */
+  word-break: break-all;     /* 强制在任意字符内换行 */
+}
+.message-item.mine .message-content {
+  background-color: #007aff;
+  color: #fff;
+}
+
+.input-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-message {
+  display: flex; 
+  float: left;
+  width: 460rpx;
+  height: 100rpx;
+
+}
+
+.send-button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  line-height: 70rpx;
+  border-radius: 20rpx;
+  background-color: aquamarine;
+  margin: 0;
+}

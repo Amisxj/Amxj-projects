@@ -1,0 +1,28 @@
+<!--components/swipe/index.wxml-->
+<view class="container">
+  <swiper 
+    class="swiper-container" 	
+    indicator-dots="{{true}}" 
+    indicator-color="{{indicatorColor}}"
+    indicator-active-color="{{indicatorActiveColor}}"
+    autoplay="{{autoplay}}" 
+    circular="{{true}}"
+    interval="{{interval}}" 
+    duration="{{duration}}">
+    <block wx:for="{{images}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" class="swiper-image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 指示点 -->
+  <view class="indicator">
+      <text
+        v-for="(item, index) in list"
+        :key="item.id"
+        class="dot"
+        :class="{ active: index === activeIndex }"
+      ></text>
+    </view>
+    <slot></slot>
+</view>

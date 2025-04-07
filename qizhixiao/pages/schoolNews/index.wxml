@@ -1,0 +1,2 @@
+<!--pages/function/index.wxml-->
+<my-board class="news" news="{{news}}" labelIcon="{{labelIcon}}" gps_icon="/static/news/address.png" bind:updateNews="updateNews"></my-board>

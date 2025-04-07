@@ -1,0 +1,13 @@
+/* pages/forget/index.wxss */
+.container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.information {
+  margin-top: 50rpx;
+}
+.mask{
+  position: absolute;
+  z-index: 1000;
+}

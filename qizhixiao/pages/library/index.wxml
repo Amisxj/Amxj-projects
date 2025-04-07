@@ -1,0 +1,20 @@
+<!--pages/library/index.wxml-->
+<view class="container">
+  <!-- 左侧选择区域 -->
+  <view class="selection">
+    <radio-group bindchange="onSelectChange" value="{{selectedValue}}">
+      <view class="choose" wx:for="{{items}}" wx:key="{{item.id}}" >
+        <radio value="{{item.id}}" style="background-color:{{selectedItem.id === item.id ? '#FFFFFF' : ''}}">{{item.name}} </radio>
+      </view>
+    </radio-group>
+  </view>
+  <!-- 右侧内容展示区域 -->
+  <view class="content" wx:if="{{selectedItem}}">
+    <!-- ...其他代码... -->
+    <view class="card" wx:for="{{selectedItem.cardList}}" wx:key="{{item.id}}" style="background-color:{{item.bgColor}}" bindtap="goToDetail" data-id="{{item.id}}" data-title="{{item.title}}">
+      <view class="card-content">
+        <text class="card-title">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/detail/lecture/index.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">【名师课堂课程预告】</text>
+    <text class="subtitle">《数字经济与数字化转型的实践与思考》</text>
+    <text class="info">文化移通 {{lecture.date}}</text>
+  </view>
+  
+  <view class="speaker-info">
+    <text class="name">主讲人：陈玉玲</text>
+    <image class="avatar" src="{{lecture.avatar}}"></image>
+    
+  </view>
+  
+  <view class="lecture-info">
+    <text class="lecture-title">讲座主题</text>
+    <text class="lecture-topic">{{lecture.topic}}</text>
+    <text class="lecture-time">讲座时间：{{lecture.date}}（{{lecture.week}}）{{lecture.startTime}}-{{lecture.endTime}}</text>
+    <text class="lecture-location">讲座地点：{{lecture.address}}</text>
+  </view>
+  
+  <view class="description">
+    <text class="description-title">嘉宾简介</text>
+    <text class="description-content">{{lecture.description}}</text>
+  </view>
+</view>

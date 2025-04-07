@@ -1,0 +1,9 @@
+<!--components/mine/card/index.wxml-->
+<view class="container">
+  <view class="items" wx:for="{{items}}" wx:key="*this">
+    <navigator url="{{item.pageUrl}}">
+      <image src="{{item.src}}" mode="aspectFill"></image>
+      <text>{{item.title}}</text>
+    </navigator>
+  </view>
+</view>

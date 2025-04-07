@@ -1,0 +1,2 @@
+<!--pages/food/index.wxml-->
+<my-tooltip id="toast" show="{{toastShow}}" content="{{toastContent}}"></my-tooltip>

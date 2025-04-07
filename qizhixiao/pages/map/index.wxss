@@ -1,0 +1,120 @@
+/* pages/map/index.wxss */
+page {
+  background-color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.container .map {
+  width: 100%;
+  height: 500rpx;
+  position: relative; /* 为绝对定位的按钮提供参考 */
+}
+.map map {
+  width: 100%;
+  height: 100%;
+}
+.locate-view {
+  position: absolute;
+  right: 20rpx; /* 距离右边距 */
+  bottom: 20rpx; /* 距离底部距离 */
+  z-index: 10; /* 确保 view 在地图上层 */
+  width: 60rpx; /* 设置圆圈图片的宽度 */
+  height: 60rpx; /* 设置圆圈图片的高度 */
+  border-radius: 50%; /* 设置为圆形 */
+  overflow: hidden; /* 隐藏超出圆圈部分的图片 */
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+  opacity: 0.8;
+}
+/* 定位图标样式 */
+.locate-view image {
+  width: 100%; /* 使图片填满 view */
+  height: 100%;
+}
+/* 定义点击后的动画效果 */
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.locate-view:active {
+  animation: scale-up 0.1s ease-in-out forwards; /* 触发动画 */
+}
+
+.schoolImage {
+  width: 100%;
+  height: 800rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+.schoolImage image {
+  width: 100%;
+  height: 100%;
+}
+.currentBuilding {
+  width: 100%;
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.currentBuilding .top {
+  width: 100%;
+  height: 7%;
+  background-color: #d1f7ea;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  /* z-index: 2;  */
+}
+.currentBuilding .detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  border:1rpx solid #d1f7ea;
+}
+
+.detail .floor {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.detail .floor .floorName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.floorName .functionRoom {
+  margin-right: 20rpx;
+  color: rgb(0, 87, 65)
+}
+.toggle-button {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 1250rpx;
+}
+.toggle-button image {
+  width: 60rpx;
+  height: 60rpx;
+}

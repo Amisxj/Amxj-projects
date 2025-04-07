@@ -1,0 +1,115 @@
+/* pages/books/index.wxss */
+.book-list {
+  display: flex;
+  flex-direction: column;
+}
+.book-item {
+  width: 90%;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.book-item .img {
+  width: 100%;
+  margin-right: 10px;
+}
+.image {
+  width: 200rpx;
+  height: 260rpx;
+  border-radius:  20rpx ;
+}
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .title {
+  font-size: 30rpx;
+}
+.header .rating {
+  color: red;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content .description  {
+  width: 100%;
+  height: 120rpx; 
+  line-height: 40rpx;
+  font-size: 25rpx;
+  color: rgb(139, 138, 138);
+  text-align: justify; 
+  display: -webkit-box; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical; 
+}
+.content .detail {
+  width: 60%;
+  height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.detail .author {
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #43c99c;
+  font-size: 25rpx;
+  align-items: center;
+ 
+}
+.detail  .category {
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #43c99c;
+  font-size: 25rpx;
+  align-items: center;
+}
+.bottom {
+  width: 100%;
+  height:  40rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.bottom .leaderboard {
+  width: 70rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  background: #000000; 
+  border-radius: 20rpx 0 0 0;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); 
+  color: #fff; 
+}   
+.bottom .ranking {
+  width: 70rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  background: #76e7c2;
+  border-radius:  0 0 20rpx 0;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); 
+  color: #fff; 
+}                 
+.bottom .reads {
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  letter-spacing: 2rpx; 
+  color: #43c99c;
+  background-color: #76e7c136;
+  border-radius: 10rpx;
+}

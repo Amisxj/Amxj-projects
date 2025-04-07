@@ -1,0 +1,20 @@
+<!-- pages/everyday/index.wxml -->
+<view class="container"> 
+  <view class="content">
+    <text class="text">{{text[0].content + ('\n')}}</text>
+    <text class="author">————{{text[0].author}}</text>
+  </view>
+  <view class="blanket"></view>
+  <view class="operate">
+    <view class="like small {{isLiked ? 'liked' : ''}}" animation="{{animationData}}">
+      <image bindtap="changeImage" src="{{currentImage}}" mode=""/>
+      <text>{{text[0].likes}}</text>
+    </view>
+    <view class="share small" >
+      <button class="sharebutton" open-type="share"  >
+        <image src="/static/index/everyday/share.png" mode=""/>
+      </button>
+      <text>{{text[0].shares}}</text>
+    </view>
+  </view>
+</view>

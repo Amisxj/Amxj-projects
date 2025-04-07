@@ -1,0 +1,13 @@
+<!--components/input/index.wxml-->
+<view class="container">
+  <view class="text">{{title}}</view>
+  <view class="content">
+    <input 
+      type="{{type}}" 
+      disabled="{{disabled}}" 
+      focus="{{autofocus}}" 
+      value="{{value}}" 
+      placeholder="{{placeholder}}" 
+      maxlength="{{maxlength}}" bindinput="showEye"/>   
+  </view>
+</view>
