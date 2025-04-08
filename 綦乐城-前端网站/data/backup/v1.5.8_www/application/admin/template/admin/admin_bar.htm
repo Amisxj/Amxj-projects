@@ -1,0 +1,16 @@
+    <div class="fixed-bar">
+        <div class="item-title">
+            <a class="back" href="{:url('Index/switch_map')}" title="返回列表"><i class="fa fa-angle-double-left"></i>返回</a>
+            <ul class="tab-base nc-row">
+                {eq name="'Admin@index'|is_check_access" value="1"}
+                <li><a href="{:url("Admin/index")}" class="tab {if condition="in_array($Request.controller, array('Admin'))"}current{/if}"><span>管理员列表</span></a></li>
+                {/eq}
+
+                {eq name='$main_lang' value='$admin_lang'}
+                {eq name="'AuthRole@index'|is_check_access" value="1"}
+                <li><a href="{:url("AuthRole/index")}" class="tab {if condition="in_array($Request.controller, array('AuthRole'))"}current{/if}"><span>角色列表</span></a></li>
+                {/eq}
+                {/eq}
+            </ul>
+        </div>
+    </div>

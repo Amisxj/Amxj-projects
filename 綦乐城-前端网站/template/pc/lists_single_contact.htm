@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/qhdcontent.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/content.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/pgwslideshow.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style-green.css" />
+<!--[if lt IE 9]>
+ <script src="{eyou:global name='web_templets_pc' /}/skin/js/html5.js"></script>
+<![endif]--><!--[if IE 6]>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/ie7.js"></script>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/dd_belatedpng.js"></script>
+ <script type="text/javascript">
+  DD_belatedPNG.fix('.top img, .footer img, .bottom img, .form-btn, .module-icon-default');
+ </script>
+<![endif]-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.7.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/superfish.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.caroufredsel.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.touchswipe.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.tools.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/pgwslideshow.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fixed.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/cloud-zoom.1.0.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/device.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/html5media-1.2.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/isotope.pkgd.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/custom.js"></script>
+</head>
+<body style="background:url({eyou:global name='web_templets_pc' /}/skin/img/bg-img-05.jpg) top center fixed;">
+<div id="wrapper" class="insi-page">{eyou:include file='head.htm'/}
+  <section class="main">
+    <div class="page-width clearfix">
+      <div class="full-page-content">
+        <div class="breadcrumbs-full">
+          <section class="page-width clearfix page-title page-title-inner clearfix">
+            <div class="breadcrumbs"><span>当前位置：</span>{eyou:position style='' /}</div>
+          </section>
+        </div>
+        <div class="full-page-content-wrapper"> 
+          <!--<div class="module">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="qhd-content">
+                  <div id="dituContent" style="width:100%;height:420px;"> &nbsp;</div>
+                  <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/map.js"></script><script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.274317,23.134123);//定义一个中心点坐标
+        map.centerAndZoom(point,10);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script></div>
+              </div>
+            </div>
+          </div>-->
+          <div class="module-default">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="qhd-content"> {$eyou.field.content} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {eyou:include file='footer.htm'/}</div>
+{eyou:include file='bottom.htm'/}
+</body>
+</html>

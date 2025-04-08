@@ -1,0 +1,114 @@
+<header class="top header-v2 desktops-section default-top">
+  <div class="top-main">
+    <div class="page-width clearfix">
+      <div class="logo float-left"><a href="{eyou:global name='web_basehost' /}"><img src="{eyou:global name='web_logo' /}" alt="{eyou:global name='web_name' /}" /></a></div>
+      <div class="top-main-content float-right">
+        <div class="top-widget float-right">
+          <div class="module-default module-no-margin">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="qhd-content">
+                  <div class="typo"> <strong><span style="font-size:18px;"><a><span style="color:#656565;"><img class="typo_img" src="{eyou:global name='web_templets_pc' /}/skin/img/tel.png" style="width: 32px; height: 32px; margin-bottom: 0px; margin-right: 10px;" /></span></a></span></strong>
+                    <div class="typo_text">
+                      <p> <strong><span style="font-size:18px;"><span style="color:#656565;">全国免费咨询热线</span></span></strong></p>
+                    </div>
+                  </div>
+                  <p style="line-height:1;"> <span style="font-size:28px;"><span style="color:#ff0000;"><span style="line-height: 1;"><strong>{eyou:global name='web_attr_1' /}</strong></span></span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="nav-wrapper">
+    <div class="page-width clearfix">
+      <nav class="nav">
+        <div class="main-nav clearfix">
+          <ul class="sf-menu">
+            <li><a class="first-level" href="{eyou:global name='web_basehost' /}"><strong>首页</strong></a><i></i></li>
+            {eyou:channelartlist typeid='1,2,3,4,5,6' currentstyle="current"}
+            <li><a class="first-level" href="{eyou:field name='typeurl' /}"><strong>{eyou:field name='typename' /}</strong></a><i></i></li>
+            {/eyou:channelartlist}
+            {eyou:channelartlist typeid='7,11' currentstyle="current"}
+            <li><a class="first-level" href="{eyou:field name='typeurl' /}"><strong>{eyou:field name='typename' /}</strong></a><i></i>
+              <ul>
+                {eyou:channel type="son"}
+                <li><a href="{$field.typeurl}"><strong>{$field.typename}</strong></a></li>
+                {/eyou:channel}
+              </ul>
+            </li>
+            {/eyou:channelartlist}
+            {eyou:channelartlist typeid='16' currentstyle="current"}
+            <li><a class="first-level" href="{eyou:field name='typeurl' /}"><strong>{eyou:field name='typename' /}</strong></a><i></i></li>
+            {/eyou:channelartlist}
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="touch-top mobile-section clearfix">
+  <div class="touch-top-wrapper clearfix">
+    <div class="touch-logo"><a href="{eyou:global name='web_basehost' /}"><img src="{eyou:global name='web_logo' /}" alt="{eyou:global name='web_name' /}" /></a></div>
+    <div class="touch-navigation">
+      <div class="touch-toggle">
+        <ul>
+          <li class="touch-toggle-item-last"><a href="javascript:;" class="drawer-menu" data-drawer="drawer-section-menu"><i class="touch-icon-menu"></i><span>导航</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="touch-toggle-content touch-top-home">
+    <div class="drawer-section drawer-section-menu">
+      <div class="touch-menu">
+        <ul>
+          <li><a href="{eyou:global name='web_basehost' /}"><span>首页</span></a></li>
+          {eyou:channelartlist typeid='1,2,3,4,5,6' currentstyle="current"}
+          <li><a href="{eyou:field name='typeurl'/}"><span>{eyou:field name='typename'/}</span></a></li>
+          {/eyou:channelartlist}
+          {eyou:channelartlist typeid='7,11' currentstyle="current"}
+          <li><a href="javascript:;"><span>{eyou:field name='typename'/}</span><i class="touch-arrow-down"></i></a>
+            <ul>
+              {eyou:channel type="son"}
+              <li><a href="{$field.typeurl}"><span>{$field.typename}</span></a></li>
+              {/eyou:channel}
+            </ul>
+          </li>
+          {/eyou:channelartlist}
+          {eyou:channelartlist typeid='16' currentstyle="current"}
+          <li><a href="{eyou:field name='typeurl'/}"><span>{eyou:field name='typename'/}</span></a></li>
+          {/eyou:channelartlist}
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+     
+     $(".touch-toggle a").click(function(event){
+      var className = $(this).attr("data-drawer");
+      
+      if( $("."+className).css('display') == 'none' ){      
+       $("."+className).slideDown().siblings(".drawer-section").slideUp();
+      }else{
+       $(".drawer-section").slideUp(); 
+      }
+      event.stopPropagation();
+     });
+     $('.touch-menu a').click(function(){     
+      if( $(this).next().is('ul') ){
+       if( $(this).next('ul').css('display') == 'none' ){
+        $(this).next('ul').slideDown();
+        $(this).find('i').attr("class","touch-arrow-up");     
+       }else{
+        $(this).next('ul').slideUp();
+        $(this).next('ul').find('ul').slideUp();
+        $(this).find('i').attr("class","touch-arrow-down");
+       }   
+      }
+     });
+    });
+</script></div>
+</div>

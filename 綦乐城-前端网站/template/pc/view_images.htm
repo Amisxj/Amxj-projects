@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/qhdcontent.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/content.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/pgwslideshow.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style-green.css" />
+<!--[if lt IE 9]>
+ <script src="{eyou:global name='web_templets_pc' /}/skin/js/html5.js"></script>
+<![endif]--><!--[if IE 6]>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/ie7.js"></script>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/dd_belatedpng.js"></script>
+ <script type="text/javascript">
+  DD_belatedPNG.fix('.top img, .footer img, .bottom img, .form-btn, .module-icon-default');
+ </script>
+<![endif]-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.7.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/superfish.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.caroufredsel.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.touchswipe.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.tools.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/pgwslideshow.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fixed.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/cloud-zoom.1.0.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/device.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/html5media-1.2.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/isotope.pkgd.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/custom.js"></script>
+</head>
+<body style="background:url({eyou:global name='web_templets_pc' /}/skin/img/bg-img-05.jpg) top center fixed;">
+<div id="wrapper" class="insi-page">{eyou:include file='head.htm'/}
+  <section class="main">
+    <div class="page-width clearfix">
+      <div class="full-page-content">
+        <div class="breadcrumbs-full">
+          <section class="page-width clearfix page-title page-title-inner clearfix">
+            <div class="breadcrumbs"><span>当前位置：</span>{eyou:position style='' /}</div>
+          </section>
+        </div>
+        <div class="full-page-content-wrapper">
+          <div class="module-default">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="product-detail product-detail-complete">
+                  <div class="product-intr clearfix">
+                    <div class="product-preview">
+                      <div class="gallery-img-wrap">
+                        <ul class="pgwSlideshow-gallery pgwSlideshow clearfix">
+                          {eyou:volist name="$eyou.field.image_list"}
+                          <li><img src="{$field.image_url}" data-large-src="{$field.image_url}" alt="{$field.intro}"/></li>
+                          {/eyou:volist}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <div class="product-info-item">
+                        <div class="product-name">
+                          <h1>{$eyou.field.title}</h1>
+                        </div>
+                        <div class="price"><strong>￥<span>{$eyou.field.jiage}</span></strong></div>
+                      </div>
+                      <div class="product-info-item">
+                        <div class="product-summary">
+                          <div class=qhd-content>
+                            <p> {$eyou.field.jianjie}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="book-btn">
+                        <div class=qhd-content>
+                          <p> <a class="btn-large btn-large-assist" href="http://wpa.qq.com/msgrd?v=3&amp;amp;uin={eyou:global name='web_attr_4' /}&amp;amp;site=qq&amp;amp;menu=yes"><span>咨询/预定</span></a></p>
+                        </div>
+                      </div>
+                      <div class="product-info-item product-info-item-last">{eyou:type}
+                        <div class="back-category"><a href="{$field.typeurl}"><span>查看更多</span> <span>{$field.typename}</span></a></div>
+                        {/eyou:type} </div>
+                    </div>
+                  </div>
+                  <div class="product-desc">
+                    <div class="tabs-default">
+                      <div class="placeholder" style="overflow:hidden; font-size:0;"> &nbsp;</div>
+                      <ul class="tabs-nav clearfix">
+                        <li> <a href="javascript:;">详细介绍</a></li>
+                        <li> <a href="javascript:;">费用包含</a></li>
+                        <li> <a href="javascript:;">费用不含</a></li>
+                        <li> <a href="javascript:;">注意事项</a></li>
+                        <script type="text/javascript">
+     $(window).load(function(){             
+       if ( !($.browser.msie && ($.browser.version == "6.0")) ) {                                                     
+       
+       var _fixedTab = $(".product-desc > .tabs-default > .tabs-nav");
+       var _placeholder = $(".placeholder");              
+       var _topVal  =  _fixedTab.offset().top;              
+       var _leftVal  =  _fixedTab.offset().left;
+       var _width  =  _fixedTab.width();
+       var _height  =  _fixedTab.height();              
+       var _tabContentHeight = 0; 
+
+       
+       function tabContentHeightFun (){
+        $(".tabs-panes").find(".tab-box").each(function(){
+         if( $(this).is(":visible") ) { _tabContentHeight = $(this).height(); }
+         return _tabContentHeight;
+        });
+       }
+       
+       function setTabFixedFun() {
+        if ( _topVal + _tabContentHeight > $(window).scrollTop() && $(window).scrollTop() >= _topVal ){
+         _fixedTab.addClass("fixed");
+         _fixedTab.css({"left":_leftVal,"width":_width});
+         _placeholder.height(_height);
+        }else{
+         _fixedTab.removeClass("fixed");
+         _fixedTab.removeAttr("style");
+         _placeholder.height(0);
+        }                                
+       }
+       
+       
+       tabContentHeightFun();
+       setTabFixedFun();
+       
+       _fixedTab.find('a').click(function(){
+        if ($(window).scrollTop() > _topVal) { $(window).scrollTop(_topVal); }
+        tabContentHeightFun ();             
+       });              
+       
+       $(window).bind("scroll",function(){                                                    
+        setTabFixedFun();               
+       });                                                     
+       
+       }
+     });
+</script>
+                      </ul>
+                      <div class="tabs-panes">
+                        <div class="tab-box clearfix">
+                          <div class="qhd-content"> {$eyou.field.content} </div>
+                        </div>
+                        <div class="tab-box clearfix">
+                          <div class="qhd-content"> {$eyou.field.fybh} </div>
+                        </div>
+                        <div class="tab-box clearfix">
+                          <div class="qhd-content"> {$eyou.field.fybuh} </div>
+                        </div>
+                        <div class="tab-box clearfix">
+                          <div class="qhd-content"> {$eyou.field.zysx} </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {eyou:include file='footer.htm'/}</div>
+{eyou:include file='bottom.htm'/}
+</body>
+</html>

@@ -1,0 +1,13 @@
+UPDATE `ey_archives_flag` SET `flag_name` = '加推' WHERE `flag_name` = '特荐' AND `flag_fieldname` = 'is_special';
+UPDATE `ey_archives_flag` SET `flag_name` = '标粗' WHERE `flag_name` = '加粗' AND `flag_fieldname` = 'is_b';
+UPDATE `ey_archives_flag` SET `flag_name` = '有图' WHERE `flag_name` = '图片' AND `flag_fieldname` = 'is_litpic';
+UPDATE `ey_archives_flag` SET `flag_name` = '外链' WHERE `flag_name` = '跳转' AND `flag_fieldname` = 'is_jump';
+UPDATE `ey_archives_flag` SET `flag_name` = '轮播' WHERE `flag_name` = '幻灯' AND `flag_fieldname` = 'is_slide';
+UPDATE `ey_archives_flag` SET `flag_name` = '热文' WHERE `flag_name` = '最热' AND `flag_fieldname` = 'is_diyattr';
+DELETE FROM `ey_shop_express` WHERE `express_code` = 'fengwang' AND `express_name` = '丰网速运';
+INSERT INTO `ey_shop_express` (`express_code`, `express_name`, `express_lnitials`, `is_choose`, `sort_order`, `add_time`, `update_time`) VALUES ('fengwang', '丰网速运', 'F', '0', '100', '1553911076', '1647484768');
+ALTER TABLE `ey_auth_role` MODIFY COLUMN `permission`  longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '已允许的权限' AFTER `cud`;
+UPDATE `ey_admin_menu` SET `menu_id` = '2004023' WHERE `menu_id` = '2010' AND `controller_name` = 'Memgift';
+ALTER TABLE `ey_tagindex` MODIFY COLUMN `typeid`  int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '栏目ID' AFTER `tag`;
+ALTER TABLE `ey_taglist` MODIFY COLUMN `typeid`  int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '栏目ID' AFTER `aid`;
+ALTER TABLE `ey_users_score` MODIFY COLUMN `type`  tinyint(1) NULL DEFAULT 1 COMMENT '类型:1-提问,2-回答,3-最佳答案4-悬赏退回,5-每日签到,6-管理员编辑,7-问题悬赏/获得悬赏,9-积分兑换/退回' AFTER `id`;

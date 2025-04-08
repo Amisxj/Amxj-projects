@@ -1,0 +1,402 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1668319323368') format('woff2'),
+        url('../fonts/iconfont.woff?t=1668319323368') format('woff'),
+        url('../fonts/iconfont.ttf?t=1668319323368') format('truetype');
+}
+
+body>.container {
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+.container .header {
+    width: 1200px;
+    height: 60px;
+    background-color: pink;
+    border-radius: 40px;
+}
+
+.header .left {
+    float: left;
+    width: 350px;
+    height: 60px;
+    border-radius: 40px;
+    display: grid;
+    flex-direction: column;
+}
+
+.header .left a {
+    position: relative;
+}
+
+.header .left a .left_back {
+    width: 108px;
+    height: 50px;
+    position: absolute;
+    top: -10px;
+    left: -42px;
+    border-radius: 40px;
+}
+
+.header .left a:hover {
+    color: #666
+}
+
+.header .left a .left_back:hover {
+    background-color: white;
+}
+
+.header .left li img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 40px;
+}
+
+.header .left p {
+    position: relative;
+    top: 10px;
+    left: 60px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .logo {
+    float: left;
+    position: relative;
+    left: 100px;
+    width: 600px;
+    height: 60px;
+}
+
+.header .logo img {
+    float: left;
+}
+
+.header .logo h1 {
+    position: relative;
+    left: -30px;
+    float: left;
+    width: 200px;
+    height: 65px;
+    line-height: 60px;
+}
+
+.header .left a {
+    position: relative;
+    top: 15px;
+    left: 50px;
+    width: auto;
+    font-size: 15px;
+}
+
+.container .content {
+    width: 1200px;
+    height: 1700px;
+}
+
+.content .left {
+    position: relative;
+    top: 20px;
+    float: left;
+    width: 720px;
+    height: 1600px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+}
+
+.left .header {
+    width: 700px;
+    height: 50px;
+    background-color: skyblue;
+}
+
+.left .header {
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.left .header li:nth-child(1) {
+    border-top-left-radius: 20px;
+    cursor: pointer;
+}
+
+.left .header li {
+    height: 40px;
+    width: 160px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.left .header li:hover {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+}
+
+.left .header li a:hover {
+    color: #666;
+}
+
+.left .main {
+    position: absolute;
+    top: 60px;
+}
+
+.left .main li {
+    width: 680px;
+    height: 200px;
+    margin: 34px 19px;
+    background-color: #f8f7f7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.left .main li .cover {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    top: 22px;
+    left: 20px;
+    overflow: hidden;
+    float: left;
+}
+.left .main li .cover img {
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    transition: transform 1.2s ease; /* 平滑过渡效果 */
+}
+
+.left .main .location:hover .food {
+    transform: scale(1.5); /* 图片放大20% */
+}
+
+.left .main li .text {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    float: left;
+    width: 300px;
+    height: 150px;
+}
+
+.left .main li .text h4 {
+    position: relative;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+.left .main li .text ul {
+    width: 300px;
+    position: relative;
+    top: 5px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left .main li .text ul img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    top: 0;
+    left: 5px;
+}
+
+.left .main li .text span {
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    display: inline;
+}
+
+.left .main li .text span span {
+    position: absolute;
+    left: 27px;
+    top: -8px;
+    font-size: 20px;
+    color: #ff2f2f;
+}
+
+.left .li_content {
+    width: 100%;
+    height: 58px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+
+.left .li_content div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.left .li_content div div:nth-child(2) {
+    display: block;
+    width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.left .main li .text p {
+    position: absolute;
+    top: 130px;
+    right: 0;
+}
+
+.left .main .next {
+    text-align: center;
+    width: 698px;
+    height: 70px;
+    padding-left: 110px;
+}
+
+.left .main .next span {
+    position: relative;
+    right: 50px;
+    top: 10px;
+    background-color: pink;
+}
+
+.left .main .next .front {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 25px;
+    border: 1px solid #E5E5E5;
+    display: inline-block;
+    text-align: center;
+}
+
+.left .main .next .text {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 25px;
+    border: 1px solid #E5E5E5;
+    display: inline-block;
+    text-align: center;
+}
+
+.left .main .next a span {
+    padding-top: 5px;
+    padding-left: 0px;
+}
+
+.left .main .next a span span {
+    position: relative;
+    top: 17px;
+    left: -19px;
+    background-color: rgba(255, 192, 203, 0);
+}
+
+.left .main .next .behind {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.left .main .next span:hover {
+    background-color: greenyellow;
+}
+
+.content .right {
+    position: relative;
+    top: 20px;
+    right: 50px;
+    float: right;
+    width: 300px;
+    height: 1350px;
+    background-color: #dedcdc;
+    /* border: 1px solid #e5e5e5; */
+    border-radius: 20px;
+    padding: 27px 27px;
+}
+
+.right .right_header {
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    background-color: skyblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.right .right_header h2 {
+    font-size: 25px;
+
+}
+
+.right .body li {
+    width: 248px;
+    height: 225px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.right .body li img {
+    background-color: pink;
+    width: 248px;
+    height: 130px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.right .body li p {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.bottom_button {
+    width: 270px;
+    display: flex;
+    margin: auto auto 0;
+    justify-content: space-between;
+}
+
+.bottom_button div {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+.bottom_button div:hover {
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+.bottom_button div span {
+    position: relative;
+    top: 9px;
+    left: 12px;
+}
+
+.bottom_button div span span {
+    position: absolute;
+    top: 17px;
+    left: 3px;
+}

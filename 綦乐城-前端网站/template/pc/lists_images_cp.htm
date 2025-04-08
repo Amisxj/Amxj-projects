@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/qhdcontent.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/content.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/pgwslideshow.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style-green.css" />
+<!--[if lt IE 9]>
+ <script src="{eyou:global name='web_templets_pc' /}/skin/js/html5.js"></script>
+<![endif]--><!--[if IE 6]>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/ie7.js"></script>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/dd_belatedpng.js"></script>
+ <script type="text/javascript">
+  DD_belatedPNG.fix('.top img, .footer img, .bottom img, .form-btn, .module-icon-default');
+ </script>
+<![endif]-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.7.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/superfish.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.caroufredsel.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.touchswipe.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.tools.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/pgwslideshow.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fixed.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/cloud-zoom.1.0.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/device.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/html5media-1.2.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/isotope.pkgd.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/custom.js"></script>
+</head>
+<body style="background:url({eyou:global name='web_templets_pc' /}/skin/img/bg-img-05.jpg) top center fixed;">
+<div id="wrapper" class="insi-page">{eyou:include file='head.htm'/}
+  <div class="header">
+    <div class="module-default">
+      <div class="module-inner">
+        <div class="module-content">
+          <div class="responsive-carousel carousel clearfix">
+            <div id="responsive-247870">
+              <div class="carousel-item">
+                <div class="carousel-img"><a href="javascript:;"><img src="{$eyou.field.typeid|gettoptype=###,'litpic'}" alt="{$eyou.field.typename}"/></a></div>
+              </div>
+            </div>
+            <div class="carousel-btn carousel-btn-fixed" id="carousel-page-247870"></div>
+            <script type="text/javascript">
+     
+  $(window).load(function(){
+   $("#responsive-247870").carouFredSel({
+    responsive : true,
+    width       : '100%',
+    items  : { visible : 1 },
+    auto     : { pauseOnHover: true, timeoutDuration:5000 },
+    swipe     : { onTouch:true, onMouse:true },
+    pagination  : "#carousel-page-247870"
+   });
+   $("#responsive-247870 .carousel-item").show();
+  });
+</script></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="main">
+    <div class="breadcrumbs-full">
+      <section class="page-width clearfix page-title page-title-inner clearfix">
+        <div class="breadcrumbs"><span>当前位置：</span>{eyou:position style='' /}</div>
+      </section>
+    </div>
+    <div class="page-width subPage-boxBg clearfix">
+      <section class="content float-left">
+        <div class="content-wrapper">
+          <div class="module">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="product-filter"> {eyou:screening id='field' currentstyle='current' alltxt='不限'}
+                  {eyou:volist name='$field.list' id='vo'}
+                  <dl class="dl-horizontal clearfix">
+                    <dt><strong>{$vo.title}</strong>：</dt>
+                    <dd> {eyou:volist name='$vo.dfvalue' id='val'} <a {$val.onClick} class="{$val.currentstyle}">{$val.name}</a>&nbsp;
+                      {/eyou:volist} </dd>
+                  </dl>
+                  {/eyou:volist}
+                  {$field.hidden}
+                  {/eyou:screening} </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-default">
+            <div class="module-inner">
+              <div class="module-content">
+                <div class="entry-list product-entry-list entry-list-mobile"> {eyou:list pagesize='5' titlelen='20' addfields='jiage'}
+                  <div class="entry-item">
+                    <div class="typo">
+                      <div class="typo-img">
+                        <div class="entry-img"><a href="{$field.arcurl}"><img src="{$field.litpic}" width="220" alt="{$field.title}"/></a></div>
+                      </div>
+                      <div class="typo-text">
+                        <div class="entry-title">
+                          <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                        </div>
+                        <div class="price"><strong>￥<span>{$field.jiage}</span></strong></div>
+                        <div class="entry-summary">
+                          <div class=qhd-content>
+                            <p> {$field.seo_description|msubstr=###,0,320/2}...</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/eyou:list} </div>
+                <div class="m-page">
+                  <ul class="pagelist">
+                    {eyou:pagelist listitem='index,end,pre,next,pageno' listsize='1'/}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {eyou:include file='right.htm'/} </div>
+  </section>
+  {eyou:include file='footer.htm'/}</div>
+{eyou:include file='bottom.htm'/}
+</body>
+</html>

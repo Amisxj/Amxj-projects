@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{eyou:global name='web_title' /}_{eyou:global name='web_name' /}</title>
+<meta name="description" content="{eyou:global name='web_description' /}" />
+<meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/qhdcontent.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/content.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/pgwslideshow.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/style-green.css" />
+<!--[if lt IE 9]>
+ <script src="{eyou:global name='web_templets_pc' /}/skin/js/html5.js"></script>
+<![endif]--><!--[if IE 6]>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/ie7.js"></script>
+ <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/dd_belatedpng.js"></script>
+ <script type="text/javascript">
+  DD_belatedPNG.fix('.top img, .footer img, .bottom img, .form-btn, .module-icon-default');
+ </script>
+<![endif]-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.7.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/superfish.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.caroufredsel.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.touchswipe.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.tools.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/pgwslideshow.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.fixed.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/cloud-zoom.1.0.2.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/device.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/html5media-1.2.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/isotope.pkgd.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/custom.js"></script>
+</head>
+<body style="background:url({eyou:global name='web_templets_pc' /}/skin/img/bg-img-05.jpg) top center fixed;">
+<div id="wrapper" class="home-page">{eyou:include file='head.htm'/}
+  <div class="header">
+    <div class="module-default">
+      <div class="module-inner">
+        <div class="module-content">
+          <div class="slideshow carousel clearfix" style="height:500px; overflow:hidden;">
+            <div id="carousel-247845"> {eyou:adv pid='1'}
+              <div class="carousel-item">
+                <div class="carousel-img"><a href="{$field.links}"><img src="{$field.litpic}" height="500" alt="{$field.title}"/></a></div>
+              </div>
+              {/eyou:adv} </div>
+            <div class="carousel-btn carousel-btn-fixed" id="carousel-page-247845"></div>
+          </div>
+          <script type="text/javascript">
+ 
+ $(window).bind("load resize",function(){
+  $("#carousel-247845").carouFredSel({
+   width       : '100%',
+   items  : { visible : 1 },
+   auto     : { pauseOnHover: true, timeoutDuration:5000 },
+   swipe     : { onTouch:true, onMouse:true },
+   pagination  : "#carousel-page-247845"
+  
+  });
+ });
+</script></div>
+      </div>
+    </div>
+  </div>
+  <section class="main">
+  {eyou:channelartlist typeid='1'}
+  <div class="full-screen clearfix">
+    <div class="module-full-screen">
+      <div class="module-inner not-animated" data-animate="fadeInUp" data-delay="200">
+        <div class="page-width">
+          <div class="module-full-screen-content">
+            <div class="qhd-module">
+              <div class="module-full-screen-title">
+                <h2>{eyou:field name='typename'/}</h2>
+              </div>
+              <div class="col-4-3 last">
+                <div class="qhd_column_contain">
+                  <div class="module-default">
+                    <div class="module-inner">
+                      <div class="module-content">
+                        <div class="portfolio-grid portfolio-grid-3col clearfix"> {eyou:arclist row='6' titlelen='10'}
+                          <div class="portfolio-grid-item not-animated" data-animate="fadeInUp"> <a href="{$field.arcurl}">
+                            <div class="portfolio-grid-img"><img src="{$field.litpic}" alt="{$field.title}"/></div>
+                            <div class="portfolio-grid-text">
+                              <h3>{$field.title}</h3>
+                            </div>
+                            <div class="overlay"></div>
+                            </a></div>
+                          {/eyou:arclist} </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-full-screen-more"><a href="{eyou:field name='typeurl'/}">查看更多</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/eyou:channelartlist} 
+  {eyou:channelartlist typeid='2'}
+  <div class="module-full-screen">
+    <div class="module-inner not-animated" data-animate="fadeInUp" data-delay="200">
+      <div class="page-width">
+        <div class="module-full-screen-title">
+          <h2>特价游经典游</h2>
+        </div>
+        <div class="module-full-screen-content">
+          <div class="portfolio-list product-list ieCode-del">
+            <ul class="row2-svar clearfix">
+              {eyou:arclist row='4' addfields='jiage' mod='4' titlelen='10'}
+              <li class="col-4-1 {eyou:eq name='$mod' value='0'}last{/eyou:eq} not-animated" data-animate='fadeInUp'>
+                <div class="product-item">
+                  <div class="portfolio-img"><a href="{$field.arcurl}"><img src="{$field.litpic}" alt="{$field.title}"/></a></div>
+                  <div class="portfolio-title">
+                    <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                  </div>
+                  <div class="price"><strong>￥<span>{$field.jiage}</span></strong></div>
+                </div>
+              </li>
+              {/eyou:arclist}
+            </ul>
+          </div>
+          <div class="portfolio-list product-list ieCode">
+            <ul class="column clearfix">
+              {eyou:arclist row='4' addfields='jiage' mod='4' titlelen='10'}
+              <li class="col-4-1 {eyou:eq name='$mod' value='0'}last{/eyou:eq} not-animated" data-animate='fadeInUp'>
+                <div class="product-item">
+                  <div class="portfolio-img"><a href="{$field.arcurl}"><img src="{$field.litpic}" alt="{$field.title}"/></a></div>
+                  <div class="portfolio-title">
+                    <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                  </div>
+                  <div class="price"><strong>￥<span>{$field.jiage}</span></strong></div>
+                </div>
+              </li>
+              {/eyou:arclist}
+            </ul>
+          </div>
+        </div>
+        <div class="module-full-screen-more"><a href="{eyou:field name='typeurl'/}">查看更多</a></div>
+      </div>
+    </div>
+  </div>
+  {/eyou:channelartlist}
+  {eyou:channelartlist typeid='4'}
+  <div class="module-full-screen">
+    <div class="module-inner not-animated" data-animate="fadeInUp" data-delay="200">
+      <div class="page-width">
+        <div class="module-full-screen-title">
+          <h2>安心旅游品质游</h2>
+        </div>
+        <div class="module-full-screen-content">
+          <div class="portfolio-list product-list ieCode-del">
+            <ul class="row2-svar clearfix">
+              {eyou:arclist row='4' addfields='jiage' mod='4' titlelen='10'}
+              <li class="col-4-1 {eyou:eq name='$mod' value='0'}last{/eyou:eq} not-animated" data-animate='fadeInUp'>
+                <div class="product-item">
+                  <div class="portfolio-img"><a href="{$field.arcurl}"><img src="{$field.litpic}" alt="{$field.title}"/></a></div>
+                  <div class="portfolio-title">
+                    <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                  </div>
+                  <div class="price"><strong>￥<span>{$field.jiage}</span></strong></div>
+                </div>
+              </li>
+              {/eyou:arclist}
+            </ul>
+          </div>
+          <div class="portfolio-list product-list ieCode">
+            <ul class="column clearfix">
+              {eyou:arclist row='4' addfields='jiage' mod='4' titlelen='10'}
+              <li class="col-4-1 {eyou:eq name='$mod' value='0'}last{/eyou:eq} not-animated" data-animate='fadeInUp'>
+                <div class="product-item">
+                  <div class="portfolio-img"><a href="{$field.arcurl}"><img src="{$field.litpic}" alt="{$field.title}"/></a></div>
+                  <div class="portfolio-title">
+                    <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                  </div>
+                  <div class="price"><strong>￥<span>{$field.jiage}</span></strong></div>
+                </div>
+              </li>
+              {/eyou:arclist}
+            </ul>
+          </div>
+        </div>
+        <div class="module-full-screen-more"><a href="{eyou:field name='typeurl'/}">查看更多</a></div>
+      </div>
+    </div>
+  </div>
+  {/eyou:channelartlist}
+  {eyou:channelartlist typeid='7'}
+  <div class="module-full-screen">
+    <div class="module-inner not-animated" data-animate="fadeInUp" data-delay="200">
+      <div class="page-width">
+        <div class="module-full-screen-title">
+          <h2>{eyou:field name='typename'/}</h2>
+        </div>
+        <div class="module-full-screen-content">
+          <div class="headlines-list-2col clearfix"> {eyou:arclist limit='0,1' titlelen='10'}
+            <div class="headlines-content not-animated" data-animate="fadeInUp" data-delay="200">
+              <p><a href="{$field.arcurl}"><img src="{$field.litpic}" height="217"  alt="{$field.title}"/></a></p>
+              <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+              <div class="headlines-content-summary">
+                <div class="qhd-content">
+                  <p> {$field.seo_description|msubstr=###,0,320/2}...</p>
+                </div>
+              </div>
+            </div>
+            {/eyou:arclist}
+            <div class="headlines-others not-animated" data-animate="fadeInUp" data-delay="400">
+              <div class="entry-list entry-list-time-hl entry-set-time-hl"> {eyou:arclist limit='1,4' titlelen='10'}
+                <div class="entry-item">
+                  <div class="time">
+                    <p class="time-day">{$field.add_time|MyDate='d',###}</p>
+                    <p class="time-date">{$field.add_time|MyDate='Y-m',###}</p>
+                  </div>
+                  <div class="entry-title">
+                    <h2><a href="{$field.arcurl}">{$field.title}</a></h2>
+                  </div>
+                  <div class="entry-summary">
+                    <div class="qhd-content">
+                      <p>{$field.seo_description|msubstr=###,0,320/2}...</p>
+                    </div>
+                  </div>
+                </div>
+                {/eyou:arclist} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/eyou:channelartlist}
+  <div class="module-full-screen module-full-screen-gray-expand module-full-screen-gray">
+    <div class="module-inner not-animated" data-animate="fadeInDown" data-delay="200">
+      <div class="page-width">
+        <div class="module-full-screen-content">
+          <div class="qhd-content">
+            <div class="column">
+              <div class="col-5-1">
+                <p> <img src="{eyou:global name='web_templets_pc' /}/skin/img/w1.png" style="width: 222px; height: 161px;"/></p>
+              </div>
+              <div class="col-5-1">
+                <p style="text-align: center; margin-bottom:0;">&nbsp; </p>
+                <p style="text-align: center;"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/w2.png" style="width: 66px; height: 66px;" /></p>
+                <p style="text-align: center;"> <span style="color:#999;"><span style="font-size:16px;">国旅品牌 半国营旅行社</span></span></p>
+              </div>
+              <div class="col-5-1">
+                <p style="text-align: center; margin-bottom:0;">&nbsp; </p>
+                <p style="text-align: center;"> <span style="font-size:16px;"><img src="{eyou:global name='web_templets_pc' /}/skin/img/w3.png" style="width: 66px; height: 66px;" /></span></p>
+                <p style="text-align: center;"> <span style="color:#999;"><span style="font-size:16px;">专做旅游 所以更专业</span></span></p>
+              </div>
+              <div class="col-5-1">
+                <p style="text-align: center; margin-bottom:0;">&nbsp; </p>
+                <p style="text-align: center;"> <span style="font-size:16px;"><img src="{eyou:global name='web_templets_pc' /}/skin/img/w4.png" style="width: 66px; height: 66px;" /></span></p>
+                <p style="text-align: center;"> <span style="color:#999;"><span style="font-size:16px;">提供7x24小时咨询服务</span></span></p>
+              </div>
+              <div class="col-5-1 last">
+                <p style="text-align: center; margin-bottom:0;">&nbsp; </p>
+                <p style="text-align: center;"> <span style="font-size:16px;"><img src="{eyou:global name='web_templets_pc' /}/skin/img/w5.png" style="width: 66px; height: 66px;" /></span></p>
+                <p style="text-align: center;"> <span style="color:#999;"><span style="font-size:16px;">专业客服 一对一服务</span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{eyou:include file='footer.htm'/}
+</div>
+{eyou:include file='bottom.htm'/}
+</body>
+</html>
